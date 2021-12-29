@@ -1,0 +1,33 @@
+<!-- Exercício baseado no esxercício 010-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imigração</title>
+</head>
+<body>
+    <h1>Verificação de Nacionalidade</h1>
+    País onde nasceu: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        function calcular() {
+            var txtp = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
+            var pais = txtp.value // não precisa converter porque já sai texto
+            res.innerHTML = '<p>Seja bem vindo!</p>'
+            if (pais == 'Brasil') { // lembrar de colocar como string, senão vai dar undefined
+                res.innerHTML += 'Você é brasileiro!'
+            } else {
+                res.innerHTML += 'Você é um estrangeiro'
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
